@@ -12,58 +12,67 @@ public class Item {
 	@Column
 	@GeneratedValue(strategy=GenerationType.AUTO) // for autonumber
 	
-	private int ItemId;
+	private int itemId;
 	@Column
-	private int StockId;
+	private int stockId;
 	@Column
-	private String ItemName;
+	private String itemName;
 	@Column
-	private float ItemPrice;
+	private float itemPrice;
 	@Column
-	private int Quantity;
+	private int quantity;
 	
 	public Item() {
 		
 	}
 
+	public Item(int itemId, int stockId, String itemName, float itemPrice, int quantity) {
+		super();
+		this.itemId = itemId;
+		this.stockId = stockId;
+		this.itemName = itemName;
+		this.itemPrice = itemPrice;
+		this.quantity = quantity;
+	}
+
 	public int getItemId() {
-		return ItemId;
+		return itemId;
 	}
 
 	public void setItemId(int itemId) {
-		ItemId = itemId;
+		this.itemId = itemId;
 	}
 
 	public int getStockId() {
-		return StockId;
+		return stockId;
 	}
 
 	public void setStockId(int stockId) {
-		StockId = stockId;
+		this.stockId = stockId;
 	}
 
 	public String getItemName() {
-		return ItemName;
+		return itemName;
 	}
 
 	public void setItemName(String itemName) {
-		ItemName = itemName;
+		this.itemName = itemName;
 	}
 
 	public float getItemPrice() {
-		return ItemPrice;
+		return itemPrice;
 	}
 
 	public void setItemPrice(float itemPrice) {
-		ItemPrice = itemPrice;
+		this.itemPrice = itemPrice;
 	}
 
 	public int getQuantity() {
-		return Quantity;
+		return quantity;
 	}
 
 	public void setQuantity(int quantity) {
-		Quantity = quantity;
+		this.quantity = quantity;
 	}
 	
 	
